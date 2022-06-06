@@ -1,0 +1,12 @@
+.outer {
+  height: 100%;
+  padding: max(10vw, 4rem);
+  font-family: "Work Sans", sans-serif;
+}
+
+.inner {
+  border: 1px solid #aaa;
+  height: 100%;
+  padding: 4rem;
+  font-size: 2rem;
+}

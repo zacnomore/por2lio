@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import Layout from "../../components/Layout";
 
-const Posts: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <Layout>
       <section>
-        <p>Posts</p>
+        <p>Projects</p>
       </section>
     </Layout>
   );
 };
 
-export default Posts;
+export default Projects;

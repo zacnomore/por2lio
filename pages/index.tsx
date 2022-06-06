@@ -5,15 +5,15 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <main className={styles.root}>
       <Head>
         <title>Zachary Svoboda</title>
         <meta name="description" content="Person" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Hello World</main>
-    </div>
+      <section>Hello</section>
+    </main>
   )
 }
 

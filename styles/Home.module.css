@@ -1,4 +1,12 @@
 .root {
-  
-  background: green;
+  height: 100%;
+  padding: 10vw;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.intro {
+  border: 1px solid #aaa;;
+  height: 100%;
+  padding: 4rem;
+  font-size: 2rem;
 }

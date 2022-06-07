@@ -3,9 +3,8 @@ import Layout from "../../components/Layout";
 
 const Projects: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="Projects">
       <section>
-        <p>Projects</p>
       </section>
     </Layout>
   );

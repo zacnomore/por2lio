@@ -1,3 +1,8 @@
+.navRow {
+  display: flex;
+  justify-content: center;
+}
+
 .navRow a {
   padding: 10px;
 }

@@ -11,10 +11,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <section>
-          <p>Hi</p>
-        </section>
+      <Layout title="Hi, my name is Zac.">
+        <p>{`Here you can find my writing that I think is presently helpful or interesting.`}</p>
+        <p>{`If you find something that isn't, please reach out so I can improve or remove it.`}</p>
+        <p></p>
       </Layout>
     </>
   );

@@ -5,8 +5,9 @@ const Navigation = () => {
   return (
     <nav className={styles.navRow}>
       <Link href="/">Intro</Link>
-      <Link href="/posts">Posts</Link>
+      <Link href="/writing">Writing</Link>
       <Link href="/projects">Projects</Link>
+      <Link href="https://www.linkedin.com/in/zacharysvoboda/">Contact</Link>
     </nav>
   );
 };

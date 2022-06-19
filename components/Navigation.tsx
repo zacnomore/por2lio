@@ -7,7 +7,7 @@ const Navigation = () => {
       <Link href="/">Intro</Link>
       <Link href="/writing">Writing</Link>
       <Link href="/projects">Projects</Link>
-      <Link href="https://www.linkedin.com/in/zacharysvoboda/">Contact</Link>
+      <a href="https://www.linkedin.com/in/zacharysvoboda/" target="_blank" rel="noreferrer">Contact</a>
     </nav>
   );
 };

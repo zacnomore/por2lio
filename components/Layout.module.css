@@ -11,6 +11,11 @@
   font-size: 1.2rem;
 }
 
+.reading {
+  max-width: 900px;
+  margin: auto;
+}
+
 .inner p {
   margin-bottom: 1rem;
 }

@@ -125,15 +125,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/loader@npm:^2.1.1":
-  version: 2.1.3
-  resolution: "@mdx-js/loader@npm:2.1.3"
+"@mdx-js/loader@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@mdx-js/loader@npm:2.3.0"
   dependencies:
     "@mdx-js/mdx": ^2.0.0
     source-map: ^0.7.0
   peerDependencies:
     webpack: ">=4"
-  checksum: 087ec51548d194631d2df9d6ae7ebd45000e9a5d67d71068487036edb1d24848a6198574745af7f57916d1e32bdeec4e256cb842296a2f02e75180221e54bc45
+  checksum: 1217f811b7ee37e4f63ca828642cd47120b7b2994975409b38cdd8550434166520c94f116efa975cb2b14760a5cc7a424848649519ce05d47f96d21b8c2c1066
   languageName: node
   linkType: hard
 
@@ -3315,7 +3315,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "por2lio@workspace:."
   dependencies:
-    "@mdx-js/loader": ^2.1.1
+    "@mdx-js/loader": ^2.3.0
     "@mdx-js/react": ^2.3.0
     "@next/mdx": ^12.1.6
     "@types/node": ^16

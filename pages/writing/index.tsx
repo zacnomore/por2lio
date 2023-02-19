@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import Layout from "../../components/Layout";
-
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Link from "next/link";
+import { getAllWriting } from "../../lib/find-writing";
 
 
 const Posts: NextPage<{writings: {
@@ -21,32 +18,11 @@ const Posts: NextPage<{writings: {
   );
 };
 
-export const getStaticProps = () => {
-
-  const files = fs.readdirSync(path.join(process.cwd(), "pages", "writing"), {
-    withFileTypes: true,
-  });
-
-  const writings = files
-    .map((f) => {
-      if (!f.name.endsWith(".mdx")) return;
-
-      const contents = fs.readFileSync(
-        path.join(process.cwd(), "pages", "writing", f.name),
-        "utf-8"
-      );
-      const { data, content } = matter(contents);
-
-      const slug = f.name.replace(/.mdx$/, "");
-      return { data, content, slug };
-    })
-    .filter((post) => post);
-
-    return {
-      props: {
-        writings
-      }
-    }
-}
-
 export default Posts;
+
+
+export async function getStaticProps() {
+  return { props: { 
+    writings: getAllWriting() 
+  } };
+}

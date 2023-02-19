@@ -6,6 +6,10 @@ date: 2019-10-17
 published: true
 ---
 
+_Alas, many of these do indeed now live in Chrome. My personal favorite, the JSON viewer, seems to be a long-standing holdout for reasons I can't quite figure. My comments regarding source mapping have sadly aged just fine however. I imagine it will get fixed in due time of course._
+
+_Regardless of the many changes over the year, I would still encourage you to discover if Firefox is a better fit for your development. It has been my on-going experience that all the coolest devtools innovations besides the nitty-gritty of js debugging happen over on the fox side._
+
 Whenever one of the browsers has a really good feature it's not too long until the rest co-opt it and we're all the better for it. There's a number of new(ish) features in Firefox that I've taken a strong liking to and I won't be surprised if they make their way over to Chrome one of these days.
 
 I won't lie, I think that JS debugging is much easier in Chrome. When I'm working with TypeScript I find Chrome's source mapping works better, more reliably and faster. When I have to navigate the source directory to add a breakpoint to some file, Chrome does a better job of constructing a sensible structure. But these things that Chrome excels in like performance profiling, inspecting network traffic and JS debugging aren't what I find myself doing all day. When you work inside frameworks, performance is a question of correct structure and optimizing how data is shared. And network traffic is a very small portion of the broader scope of what the frontend needs to do.

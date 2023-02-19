@@ -2,7 +2,7 @@
 title: Extending pre-existing types in TypeScript
 ---
 
-_If you're in Angular reactive or template forms are a much better option. This is just an exploration of typescript._
+_Note - If you're in Angular reactive or template forms are a much better option. This is just an exploration of typescript._
 
 It can be quite tempting to modify a class or interface when implementing new features. I first noticed this habit when I was mapping some objects that I found to have a lot extraneous data. I went looking to see if I could pare it down at all, maybe making my life a little easier. Nearly every property on this object was deeply nested and looked unrelated to the rest. There was no pivotal moment though that made this object bloated, I could see they were added one at a time by different authors. It made sense, each developer felt it was not the time to refactor and _surely_ someone after them would.
 

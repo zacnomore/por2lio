@@ -165,6 +165,7 @@ function deliverMessages () {
   .filter(you.todaysRoute.hasOwnProperty) // We'll skip any residents that don't have mail!
   .forEach(resident => {
     resident.giveMessage(you.getMessages());
+  })
 }
 ```
 

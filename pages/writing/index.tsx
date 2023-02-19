@@ -12,7 +12,9 @@ const Posts: NextPage<{writings: {
   return (
     <Layout title="Writing">
       <section>
-        {writings.map(w => w.slug).map(s => <Link key={s} href={'writing/' + s}>{s}</Link>)}
+        <ul>
+          {writings.map(w => w.slug).map(s => <li key={s}><Link href={'writing/' + s}>{s}</Link></li>)}
+        </ul>
       </section>
     </Layout>
   );

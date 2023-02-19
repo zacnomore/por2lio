@@ -6,11 +6,11 @@
 
 .inner {
   border: 1px solid #aaa;
-  height: 100%;
   padding: 2rem;
   font-size: 1rem;
   max-width: 900px;
   margin: auto;
+  margin-bottom: 4rem;
 }
 
 .inner p {

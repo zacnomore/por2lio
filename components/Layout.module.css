@@ -1,17 +1,14 @@
 .outer {
   height: 100%;
-  padding: max(10vw, 4rem);
+  padding: 2rem;
   font-family: "Work Sans", sans-serif;
 }
 
 .inner {
   border: 1px solid #aaa;
   height: 100%;
-  padding: max(min(10vw, 4rem), 2rem);
-  font-size: 1.2rem;
-}
-
-.reading {
+  padding: 2rem;
+  font-size: 1rem;
   max-width: 900px;
   margin: auto;
 }

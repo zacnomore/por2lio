@@ -10,7 +10,7 @@ interface Props {
 
 const Layout = ({children, title, reading}: Props) => {
   return <main className={styles.outer}>
-    <section className={`${styles.inner} ${reading ? styles.reading : ''}`}>
+    <section className={styles.inner}>
       <header className={styles.header}>{title}</header>
       {children}
     </section>

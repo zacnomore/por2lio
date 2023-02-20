@@ -2,19 +2,24 @@ import type { NextPage } from "next";
 import Layout from "../../components/Layout";
 import Link from "next/link";
 import { getAllWriting } from "../../lib/find-writing";
+import React from "react";
+import styles from './index.module.css';
 
 
-const Posts: NextPage<{writings: {
-  data: {};
-  content: string;
-  slug: string;
-}[]}> = ({writings}) => {
+const Posts: NextPage<{ writings: ReturnType<typeof getAllWriting> }> = ({writings}) => {
   return (
     <Layout title="Writing">
       <section>
-        <ul>
-          {writings.map(w => w.slug).map(s => <li key={s}><Link href={'writing/' + s}>{s}</Link></li>)}
-        </ul>
+        <dl>
+          { writings
+            .map(({ slug, meta }) => ({ slug, title: meta.title, description: meta.description }))
+            .map(({ slug, title, description }) => 
+              <React.Fragment key={ slug }>
+                <dt><Link href={'writing/' + slug}>{ title }</Link></dt>
+                <dd>{ description }</dd>
+              </React.Fragment>
+            )}
+        </dl>
       </section>
     </Layout>
   );

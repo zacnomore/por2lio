@@ -1,5 +1,8 @@
 ---
 title: Extending pre-existing types in TypeScript
+description: How the new generics functionality opens doors to reusability
+slug: generics-for-reusability
+published: true
 ---
 
 _Note - If you're in Angular reactive or template forms are a much better option. This is just an exploration of typescript._

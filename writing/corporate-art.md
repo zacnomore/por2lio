@@ -14,11 +14,11 @@ As someone that spends their days in front of this screen trying to think up new
 
 I believe we should be bringing _more_ artistry to the web. The problem is often a lack of vision. Websites aren't movies, there's no director to guide the show. There's a spectrum between craftsmanship and artistry varied by their degree of self-determination. Those furthest reaches are hard to find, a painting is limited marginally by cost and practicalities of the material. On the other end, we could imagine a furniture-maker is substantially limited by having specifications to follow but the details of their carving or fabric choices could represent a level of artistry too. Websites seem an awful lot closer to furniture, don't they?
 
-All that space in the middle is occupied by corporate art. These are products made with care but rather diffuse direction and a distinct lack of vision. We are dealing with a [functionalist](https://en.wikipedia.org/wiki/Functionalism_(architecture)) approach in the web. Design to the purpose and no further. 
- 
-For as much as we talk about the _experience_, it is not remotely important. In fact, what we mean is just a laundry list of features. Even when the customer isn't paying for the site itself that's what the conversation revolves around. I can say from experience that eCommerce development is not a question of how to make a pleasant shopping experience but an *effective* one. And that is defined by all the ways that we cross-sell, up-sell, increase average order value, attribute sales, convert... In truth, our users can be seen as an obstacle to accessing their wallet but this myopic approach avoids the mutually fulfilling possibility of a beautiful or interesting or engaging application. 
+All that space in the middle is occupied by corporate art. These are products made with care but rather diffuse direction and a distinct lack of vision. We are dealing with a [functionalist](<https://en.wikipedia.org/wiki/Functionalism_(architecture)>) approach in the web. Design to the purpose and no further.
 
-I propose 3 avenues for improvement. 
+For as much as we talk about the _experience_, it is not remotely important. In fact, what we mean is just a laundry list of features. Even when the customer isn't paying for the site itself that's what the conversation revolves around. I can say from experience that eCommerce development is not a question of how to make a pleasant shopping experience but an _effective_ one. And that is defined by all the ways that we cross-sell, up-sell, increase average order value, attribute sales, convert... In truth, our users can be seen as an obstacle to accessing their wallet but this myopic approach avoids the mutually fulfilling possibility of a beautiful or interesting or engaging application.
+
+I propose 3 avenues for improvement.
 
 - Treat the web like a movie, find a director
 - Give instructions like you would to an artist
@@ -38,8 +38,7 @@ The backlog isn't the only place either, too often our product owners and manage
 
 ## Feedback, Feedback, Feedback
 
-
-Part of what we're experiencing here is the magical division of labor. It's certainly efficient at breaking down the work but a website is not a widget. It's not as simple as sending everything downstream from customer to design to development. Cycles of feedback cultivate quality and hone in on the vision. Building an understanding between disciplines breeds efficiency too, even if discussions and meeting don't look immediately productive. 
+Part of what we're experiencing here is the magical division of labor. It's certainly efficient at breaking down the work but a website is not a widget. It's not as simple as sending everything downstream from customer to design to development. Cycles of feedback cultivate quality and hone in on the vision. Building an understanding between disciplines breeds efficiency too, even if discussions and meeting don't look immediately productive.
 
 In particular, I would call out to developer for a closer relationship with designers. We are champions for the technology and the user, we need to communicate the practicalities and problems with a design. We can't expect the nuances of screen readers and responsive implementations to be top of mind for our designers who must work in the abstract, attempting to reach near infinite compromises between the seemingly endless conflicting needs of our users. Not only do we need to provide feedback but we need to take it as well. [Storybook](https://storybook.js.org/) is a great tool for building and documenting UIs but it's also a great place for designers to understand the many implications of a given implementation and take issue before things crystalize.
 

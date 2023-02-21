@@ -14,22 +14,27 @@ I wondered how this could be prevented, I knew there was some logic to the const
 
 So, here's an angular service that creates view-model objects for building forms out of more abstract model objects. It provides some utilities for using the form objects, very strong typing and transformational function to switch between the given object's type and its corresponding form object.
 
-
 ```typescript
-import {Injectable} from '@angular/core';
+import { Injectable } from "@angular/core";
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: "root" })
 export class FormService {
-  createForm<T>(initialValues: T, validators?: { [P in keyof T]: Validator<T[P]>[]}): Form<T> {
-    return Array.from(Object.entries(initialValues)).reduce((acc, [key, val]) => {
-      acc[key] = {
-        value: val,
-        touched: false,
-        valid: false,
-        validate: !!validators ? validators[key] || [] : []
-      };
-      return acc;
-    }, <Form<T>>{});
+  createForm<T>(
+    initialValues: T,
+    validators?: { [P in keyof T]: Validator<T[P]>[] }
+  ): Form<T> {
+    return Array.from(Object.entries(initialValues)).reduce(
+      (acc, [key, val]) => {
+        acc[key] = {
+          value: val,
+          touched: false,
+          valid: false,
+          validate: !!validators ? validators[key] || [] : [],
+        };
+        return acc;
+      },
+      <Form<T>>{}
+    );
   }
 
   validateForm<T>(form: Form<T>): ValidationReport<T> {
@@ -38,7 +43,7 @@ export class FormService {
       if (form.hasOwnProperty(key)) {
         report.push({
           key,
-          valid: this.validateField(form[key])
+          valid: this.validateField(form[key]),
         });
       }
     }
@@ -46,9 +51,8 @@ export class FormService {
   }
 
   validateField<T>(field: Field<T>): boolean {
-    return field.validation.every(v => v(field.value));
+    return field.validation.every((v) => v(field.value));
   }
-
 
   extractData<T>(form: Form<T>): T {
     return Array.from(Object.entries(form)).reduce((acc, [key, val]) => {
@@ -57,7 +61,6 @@ export class FormService {
     }, <T>{});
   }
 }
-
 
 // This is the magic. For each key [Property in base type], there's a Field of the type of the property in the base type.
 // T[P] accesses the type of P rather that using just P which would give its key instead
@@ -73,7 +76,7 @@ export interface Field<T> {
 }
 
 export type ValidationReport<T> = {
-  key: keyof T,
+  key: keyof T;
   valid: boolean;
 }[];
 

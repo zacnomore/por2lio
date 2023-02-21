@@ -1,8 +1,7 @@
-
-import { remark } from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
-import { Compatible } from 'vfile';
+import { remark } from "remark";
+import html from "remark-html";
+import prism from "remark-prism";
+import { Compatible } from "vfile";
 
 export default async function markdownToHtml(markdown: Compatible) {
   const result = await remark()

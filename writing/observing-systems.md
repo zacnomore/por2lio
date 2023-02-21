@@ -16,9 +16,9 @@ Imagine that you get a new job as a messenger for your local neighborhood. Every
 const charlie = {
   getMessages: () => [
     `Kite flying contest tomorrow at noon`,
-    `The butcher has a sale on steaks!`
-  ]
-}
+    `The butcher has a sale on steaks!`,
+  ],
+};
 
 class Messenger {
   _messages = [];
@@ -26,10 +26,7 @@ class Messenger {
     return this._messages;
   }
   addMessages(newMessages) {
-    this._messages = [
-      ...this._messages,
-      ...newMessages
-    ];
+    this._messages = [...this._messages, ...newMessages];
   }
   emptyMessages() {
     this._messages = [];
@@ -40,26 +37,24 @@ class Messenger {
 const you = new Messenger();
 
 // Called at 8 am
-function start () {
-  you.addMessages(
-    charlie.getMessages()
-  );
+function start() {
+  you.addMessages(charlie.getMessages());
 }
 
 // Called for each delivery
-function deliverMessages () {
-  neighborhood.forEach(resident => {
+function deliverMessages() {
+  neighborhood.forEach((resident) => {
     resident.giveMessage(you.getMessages());
-  })
+  });
 }
 
 // Called at 4 pm
-function end () {
+function end() {
   you.emptyMessages();
 }
 ```
 
-There's some problems though. When you told Sal about the fun at the butcher shop he was less than interested. *He's a vegetarian.* Also, Stanley is very sour on the whole kite thing and he does not want to talk about it. It was alright for a first day but you wonder if there's room for improvement so you sit down and think about the problems you've seen:
+There's some problems though. When you told Sal about the fun at the butcher shop he was less than interested. _He's a vegetarian._ Also, Stanley is very sour on the whole kite thing and he does not want to talk about it. It was alright for a first day but you wonder if there's room for improvement so you sit down and think about the problems you've seen:
 
 You decide to visit your boss's office after work to make some suggestions.
 
@@ -69,9 +64,9 @@ You've figured out that many people in your neighborhood only care about certain
 
 ```javascript
 const messageTypes = {
-  EVENT: 'event',
-  SALE: 'sale'
-}
+  EVENT: "event",
+  SALE: "sale",
+};
 
 // We ask Charlie to mark up the envelopes
 // with the message type
@@ -79,28 +74,26 @@ const charlie = {
   getMessages: () => [
     {
       type: messageTypes.EVENT,
-      body: `Kite flying contest tomorrow at noon.`
+      body: `Kite flying contest tomorrow at noon.`,
     },
     {
       type: messageTypes.SALE,
-      body: `Info: The butcher has a sale on steaks!`
-    }
-  ]
-}
+      body: `Info: The butcher has a sale on steaks!`,
+    },
+  ],
+};
 
 class Messenger {
   // Only give the messages matching the given type
   getMessages(type) {
-    return this._messages.filter(
-      m => m.type === type
-    );
+    return this._messages.filter((m) => m.type === type);
   }
 }
 
 // Our recipients now tell us what kinds
 // of messages they would like
-function deliverMessages (types) {
-  return types.flatMap(type => you.getMessages(type));
+function deliverMessages(types) {
+  return types.flatMap((type) => you.getMessages(type));
 }
 ```
 
@@ -116,26 +109,25 @@ You make the following amendments:
 class SubscriptionBox {
   _subscriptions = [];
   _messageTypes = {
-    WEATHER: 'weather',
-    SALE: 'sale'
-  }
+    WEATHER: "weather",
+    SALE: "sale",
+  };
 
   // Residents come at any time and subscribe to topics they would like
   // These come into effect the following day
   subscribe(resident, messageType) {
-    this._subscriptions.push({residence, messageType});
+    this._subscriptions.push({ residence, messageType });
   }
 
   unsubscribe(resident, messageType) {
     this._subscriptions.splice(
-      this._subscriptions.findIndex(
-        sub => sub === {resident, messageType}
-      ), 1
+      this._subscriptions.findIndex((sub) => sub === { resident, messageType }),
+      1
     );
   }
 
   getSubscribedTypes(resident) {
-    return this._subscriptions.filter(sub => sub.resident === resident);
+    return this._subscriptions.filter((sub) => sub.resident === resident);
   }
 
   getSubscriptionsByResident() {
@@ -155,17 +147,16 @@ class Messenger {
 // A lovely addition to your town!
 const coolBox = new SubscriptionBox();
 
-
 function start() {
   you.todaysRoute = getSubscriptionsByResident();
 }
 
-function deliverMessages () {
+function deliverMessages() {
   neighborhood
-  .filter(you.todaysRoute.hasOwnProperty) // We'll skip any residents that don't have mail!
-  .forEach(resident => {
-    resident.giveMessage(you.getMessages());
-  })
+    .filter(you.todaysRoute.hasOwnProperty) // We'll skip any residents that don't have mail!
+    .forEach((resident) => {
+      resident.giveMessage(you.getMessages());
+    });
 }
 ```
 

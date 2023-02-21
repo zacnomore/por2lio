@@ -1,7 +1,10 @@
-import Layout from '../../components/Layout';
-import { getAllWriting, getWritingBySlug as getProjectBySlug } from '../../lib/find-writing';
-import markdownToHtml from '../../lib/code-highlighting';
-import parse from 'html-react-parser';
+import Layout from "../../components/Layout";
+import {
+  getAllWriting,
+  getWritingBySlug as getProjectBySlug,
+} from "../../lib/find-writing";
+import markdownToHtml from "../../lib/code-highlighting";
+import parse from "html-react-parser";
 
 interface Props {
   content: string;
@@ -10,33 +13,30 @@ interface Props {
 
 const Project = ({ meta, content }: Props) => {
   return <Layout title={meta.title}>{parse(content)}</Layout>;
-}
+};
 
 export default Project;
-// TODO: Dedupe
+
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const writing = getProjectBySlug(params.slug, 'project');
-  const content = await markdownToHtml(writing.content || '');
+  const writing = getProjectBySlug(params.slug, "project");
+  const content = await markdownToHtml(writing.content || "");
 
   return {
-    props: {
-      ...writing,
-      content
-    }
+    props: { ...writing, content },
   };
 }
 
 export async function getStaticPaths() {
-  const docs = getAllWriting('project');
+  const docs = getAllWriting("project");
 
   return {
     paths: docs.map((doc) => {
       return {
         params: {
-          slug: doc.slug
-        }
+          slug: doc.slug,
+        },
       };
     }),
-    fallback: 'blocking'
+    fallback: "blocking",
   };
 }

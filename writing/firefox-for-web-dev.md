@@ -18,7 +18,7 @@ I still use Firefox because it beats Chrome in all the things I need to regularl
 
 ## Accessibility Inspector
 
-![Accessibility panel](./images/accessibility-inspector.png)*Accessibility tree inspector, a companion to the page inspector*
+![Accessibility panel](./images/accessibility-inspector.png)_Accessibility tree inspector, a companion to the page inspector_
 
 The accessibility panel was fully un-veiled about this time last year. It's matured quite a bit since then, especially in performance. It used to get bogged down very easily but it's become quite usable. I used to run it all the time to check what kinds of issues I might be able to fix but I quickly found that it just wasn't hard to head them off! Using native solutions often provides accessibility for free. Now, I mostly check in on this panel when I need to make sure that sub-optimal workarounds like extra wrapping html or pseudo-elements aren't costing us.
 
@@ -26,32 +26,31 @@ The accessibility panel was fully un-veiled about this time last year. It's matu
 
 One of my favorite little Firefox "bonuses" is the JSON viewer found when accessing a JSON API. It's not much more than a prettified syntax highlighted version but I find that's plenty! When I'm looking for a specific property there's the search at the top and a convenient "copy" button for when I want to use my favorite JSON to TS interface [VS Code extension](https://github.com/MariusAlch/vscode-json-to-ts).
 
-![JSON from an API shown through a viewing tool](./images/JSON-viewer.png)*Accessing a JSON API directly makes it easy to identify its struture*
- (Note, the JSON viewer is only enabled by default on Developer Edition)
+![JSON from an API shown through a viewing tool](./images/JSON-viewer.png)_Accessing a JSON API directly makes it easy to identify its struture_
+(Note, the JSON viewer is only enabled by default on Developer Edition)
 
 ## Flexbox and Grid Inspection
 
-When you're confused layout there's nothing like a visual to get you out of that hole. I *love* the flexbox inspector. It does a fantastic job of explaining how an element ending up getting the size it did. Here's where it started, here's how much extra space it was given, here's where it ended up. Click the flex button in the html inspector and you'll see the flex children in the page highlighted.
+When you're confused layout there's nothing like a visual to get you out of that hole. I _love_ the flexbox inspector. It does a fantastic job of explaining how an element ending up getting the size it did. Here's where it started, here's how much extra space it was given, here's where it ended up. Click the flex button in the html inspector and you'll see the flex children in the page highlighted.
 
-![Flexbox inspector button](./images/flex-html-button.png)*Button to trigger the flex inspector*
+![Flexbox inspector button](./images/flex-html-button.png)_Button to trigger the flex inspector_
 
 Click one of the children and look at their layout panel to find how the browser is divvying up that space. So many times I've gone here to slap my head, say "DOH" and go back to apply that `flex-grow` property.
 
-![Flexbox layout panel](./images/flex-layout-panel.png)*Flexbox calculations that lead to the final size*
+![Flexbox layout panel](./images/flex-layout-panel.png)_Flexbox calculations that lead to the final size_
 
 ## Syntax highlighting
 
 Not quite a feature like the rest but I appreciate the HTML highlighting in Firefox. I find that it does a better job of differentiating between the different kinds of information. Overall it's just easier to read and scan. Definitely a matter of personal taste though.
 
-![Chrome inspector](./images/chrome-inspector.png)*Chrome inspector*
+![Chrome inspector](./images/chrome-inspector.png)_Chrome inspector_
 
 Notice how attributes, their values and text nodes have almost the same color in Chrome but very different ones in Firefox.
 
-![Firefox inspector](./images/firefox-inspector.png)*Firefox inspector*
+![Firefox inspector](./images/firefox-inspector.png)_Firefox inspector_
 
 ## Finding DOM Event Listeners
 
 Last but not least, I find myself stepping through the event handlers on my UI from time to time and the easier way is definitely through the DOM event buttons. You can view a snippet of the handler or even click through to the file itself.
 
-![An event listener in the HTML panel of the page inspector](./images/DOM-events.png)*A click event handler shown in the HTML panel*
-
+![An event listener in the HTML panel of the page inspector](./images/DOM-events.png)_A click event handler shown in the HTML panel_

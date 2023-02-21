@@ -9,10 +9,10 @@ export default function Document() {
           rel="stylesheet"
         />
 
-<link
-            rel="stylesheet"
-            href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
-          ></link>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
+        ></link>
       </Head>
       <body>
         <Main />

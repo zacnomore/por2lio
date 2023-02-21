@@ -9,7 +9,6 @@ site: https://pwa-podcatcher-nine-black.now.sh/
 published: true
 ---
 
-
 ## What
 
 Podcast client (AKA podcatcher) that supports search and audio streaming
@@ -49,8 +48,8 @@ I emerged with an understanding of the state management problem in general but n
 I absolutely had a bit too much fun with rxjs in here but I think it came out rather elegant! The code is available in full on [Github](https://github.com/zacnomore/pwadcatcher/blob/master/src/app/player/services/audio-player.service.ts) but I have summarized and annotated it here for your enjoyment.
 
 ```typescript
-// This will be our source of truth. The `audioState$` observable is public and exposes this 
-// information in a constantly correct fashion 
+// This will be our source of truth. The `audioState$` observable is public and exposes this
+// information in a constantly correct fashion
 export interface IAudioState {
   isPlaying: boolean;
   canPlay: boolean;
@@ -82,7 +81,7 @@ export class AudioPlayerService {
     });
   }, 4000);
 
-  // This is most of the magic. We want to listen for our own events but also the audio 
+  // This is most of the magic. We want to listen for our own events but also the audio
   // objects events too. This is how we know things like the audio is loading or has finished playing
   public audioState$: Observable<IAudioState> = this.playlistService.currentEpisode$.pipe(
     // Side-effect sets the native audio player

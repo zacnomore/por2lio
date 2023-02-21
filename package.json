@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
+    "@vercel/analytics": "^0.1.10",
     "gray-matter": "^4.0.3",
     "html-react-parser": "^3.0.9",
     "next": "^13.1.6",

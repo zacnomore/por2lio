@@ -11,7 +11,7 @@ export function getWritingBySlug(slug: string) {
   const { data, content } = matter(fileContents);
   const serializableMeta = Object.fromEntries(
     Object.entries(data)
-      .map(([k, v]) => ([k, `${v}`]))
+      .map(([k, v]) => ([k, k === 'date' ? (new Date(v)).getFullYear() : `${v}`]))
   );
 
   return { 
@@ -26,7 +26,9 @@ export function getAllWriting() {
   const slugs = fs.readdirSync(docsDirectory);
   const writings = slugs
     .map((slug) => getWritingBySlug(slug))
-    .filter(w => w.published);
+    .filter(w => w.published)
+    .sort((a, b) => (new Date(a.meta.date)).getTime() - (new Date(b.meta.date)).getTime())
+    .reverse()
 
   return writings;
 }

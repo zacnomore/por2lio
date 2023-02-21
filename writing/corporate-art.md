@@ -2,20 +2,47 @@
 title: Corporate Artistry
 description: The web as art, hopefully maybe
 slug: push-and-pull-of-corporate-art
-published: false
+published: true
+date: 2023-02-20
 ---
 
-[The supreme court is currently deciding a case regarding a website designer who doesn't want to make websites for gay couples.](https://www.npr.org/2022/12/05/1140824371/supreme-court-gay-marriage-colorado) One of the concerns for the case that caught my eye was whether websites should be considered art.
+[The supreme court is currently deciding a case](https://www.npr.org/2022/12/05/1140824371/supreme-court-gay-marriage-colorado) regarding a website designer. One of the concerns for the case that caught my eye was whether websites should be considered art.
 
-Ultimately, as someone that spends their days in front of this screen trying to think up new and interesting ways to layout text and images, I sure like to imagine that there is actually a degree of artistry here. As far as frontend developers go, I'm more on the JavaScripty side of things but I find beauty in code all the time. A simple and clear solution to a problem is thought provoking and inspiring. If that doesn't sound like art, I'm not sure what would! 
+As someone that spends their days in front of this screen trying to think up new and interesting ways to layout text and images, I sure like to imagine that there is a degree of artistry here. Now, I'm more on the JavaScripty side of things but I do find beauty in code all the time. A simple and clear solution to a problem is thought provoking and inspiring. To me, that's art.
 
-I believe we should be bringing _more_ artistry to the web. The most radical departure to art we see in the web is how diffuse the control is. Websites aren't movies, there's no director to guide the show. If we consider a spectrum spanning between pure craftsmanship and pure artistry mediated by the degree of decision-making of that individual. Those furthest reaches are hard to find, a painting exihibit small but real limitations in the decision-making such as cost and practicalities of the material. On the other end, we could imagine a furniture-maker may have specifications to follow but the details of their carving or fabric choices could represent a level of artistry. Websites seem an awful lot closer to furniture, don't they?
+## A More Beautiful Web
 
-All that space in the middle is what I'd call corporate art. I think our workplaces are sufferring from a highly functionally-oriented approach to this art. In the web, you might look at the high degree of fashionality in design and think otherwise but this rapid trend cycle is just a means to differentiate new sites from their legacy bretheren. There's no artistic purpose in looking like every other new site. Choosing to look like everyone else isn't much of a choice at all.
+I believe we should be bringing _more_ artistry to the web. The problem is often a lack of vision. Websites aren't movies, there's no director to guide the show. There's a spectrum between craftsmanship and artistry varied by their degree of self-determination. Those furthest reaches are hard to find, a painting is limited marginally by cost and practicalities of the material. On the other end, we could imagine a furniture-maker is substantially limited by having specifications to follow but the details of their carving or fabric choices could represent a level of artistry too. Websites seem an awful lot closer to furniture, don't they?
 
-That's really a landing page game anyways. When we start looking at the enterprise level, things get pretty dismal. The _experience_ is not remotely important. In fact, the pitch for these products is a laundry list of features. Even when the customer isn't paying for the site itself that's what the conversation revolves around. I can say from experience that eCommerce development is not a question of how to make a pleasant shopping experience but an *effective* one. And that is defined by all the ways that we cross-sell, up-sell, increase average order value, attribute sales, convert...
+All that space in the middle is occupied by corporate art. These are products made with care but rather diffuse direction and a distinct lack of vision. We are dealing with a [functionalist](https://en.wikipedia.org/wiki/Functionalism_(architecture)) approach in the web. Design to the purpose and no further. 
+ 
+For as much as we talk about the _experience_, it is not remotely important. In fact, what we mean is just a laundry list of features. Even when the customer isn't paying for the site itself that's what the conversation revolves around. I can say from experience that eCommerce development is not a question of how to make a pleasant shopping experience but an *effective* one. And that is defined by all the ways that we cross-sell, up-sell, increase average order value, attribute sales, convert... In truth, our users can be seen as an obstacle to accessing their wallet but this myopic approach avoids the mutually fulfilling possibility of a beautiful or interesting or engaging application. 
 
-Part of what we're experiencing here is the division of labor. It's certainly efficient at breaking down the work but what we're losing is the auteur approach. A big-picture view is afforded to the director of IT but their artistic vision is diluted and corrupted through a branching game of telephone as instructions filter down the org chart. How can we get our IT director to work more like a movie director?
+I propose 3 avenues for improvement. 
 
-- Creative director in tandem with "producer" IT Director 
-- CTA - give instructions like an artist (communicate intention) 
+- Treat the web like a movie, find a director
+- Give instructions like you would to an artist
+- Build partnerships, not assembly lines
+
+## Building Artistic Vision
+
+Many companies are already here but if you haven't heard there's a new C-level on the scene - the CXO. The chief experience officer is responsible for being the voice of the user but I want to elevate that a bit. This person needs to provide the vision that guides the feel of our application. What emotions should our user feel? Why are they invested in what we're doing. While some of the more mundane enterprise apps may lack the flair that warrants such discussion, a strong step in the direction of emotional appeal is always merited.
+
+A task tracking app could just feature the status of a given item but we all know how it feels to get something hard done. Why should our application unceremoniously flip from "In Progress" to "Done" when it can celebrate with us? Animation is an often neglected aspect, consider embellishing and embracing the meaning of the moment. Confetti might be a bit over the top for the business-minded but a simple flourish can create a connection for the user.
+
+## Communicate Intention
+
+The dreaded user story. I won't wax poetic about the perfect formulation of some templated sentence, that's not the point at all! What I mean to say is that when we build our backlog, we need to strike a balance between achievable and aspirational. Creating enough breathing space to allow expression can me the difference between a wrote UI and an exciting one.
+
+The backlog isn't the only place either, too often our product owners and managers of many breeds like to step in and flex their design muscles. A level of restraint here will allow our well-trained designers to identify the more unconventional possibilities. A little bit of trust and self-control could be the difference between an obvious implementation and an innovative one.
+
+## Feedback, Feedback, Feedback
+
+
+Part of what we're experiencing here is the magical division of labor. It's certainly efficient at breaking down the work but a website is not a widget. It's not as simple as sending everything downstream from customer to design to development. Cycles of feedback cultivate quality and hone in on the vision. Building an understanding between disciplines breeds efficiency too, even if discussions and meeting don't look immediately productive. 
+
+In particular, I would call out to developer for a closer relationship with designers. We are champions for the technology and the user, we need to communicate the practicalities and problems with a design. We can't expect the nuances of screen readers and responsive implementations to be top of mind for our designers who must work in the abstract, attempting to reach near infinite compromises between the seemingly endless conflicting needs of our users. Not only do we need to provide feedback but we need to take it as well. [Storybook](https://storybook.js.org/) is a great tool for building and documenting UIs but it's also a great place for designers to understand the many implications of a given implementation and take issue before things crystalize.
+
+## An Artistic Mindset
+
+The number one thing that needs to change is our thinking. We have endless outlets for inspiration - games in particular show how emotionally invested people are willing to be in digital experiences. If we trust in our abilities and strive for more, we can make something that users want in a truly meaningful way.

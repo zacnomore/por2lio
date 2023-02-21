@@ -2,6 +2,7 @@
 title: Extending pre-existing types in TypeScript
 description: How the new generics functionality opens doors to reusability
 slug: generics-for-reusability
+date: 2019-10-08
 published: true
 ---
 

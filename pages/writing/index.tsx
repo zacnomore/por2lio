@@ -12,10 +12,15 @@ const Posts: NextPage<{ writings: ReturnType<typeof getAllWriting> }> = ({writin
       <section>
         <dl>
           { writings
-            .map(({ slug, meta }) => ({ slug, title: meta.title, description: meta.description }))
-            .map(({ slug, title, description }) => 
+            .map(({ slug, meta }) => ({ 
+              slug, 
+              title: meta.title, 
+              description: meta.description,
+              date: meta.date
+            }))
+            .map(({ slug, title, description, date }) => 
               <React.Fragment key={ slug }>
-                <dt><Link href={'writing/' + slug}>{ title }</Link></dt>
+                <dt><Link href={'writing/' + slug}>{ title } ({ date })</Link></dt>
                 <dd>{ description }</dd>
               </React.Fragment>
             )}

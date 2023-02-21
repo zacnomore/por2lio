@@ -35,6 +35,6 @@ export default Posts;
 
 export async function getStaticProps() {
   return { props: { 
-    writings: getAllWriting() 
+    writings: getAllWriting('blog') 
   } };
 }

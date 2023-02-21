@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import { getAllWriting, getWritingBySlug } from '../../lib/find-writing';
+import { getAllWriting, getWritingBySlug as getProjectBySlug } from '../../lib/find-writing';
 import markdownToHtml from '../../lib/code-highlighting';
 import parse from 'html-react-parser';
 
@@ -8,14 +8,14 @@ interface Props {
   meta: Record<string, string>;
 }
 
-const Writing = ({ meta, content }: Props) => {
+const Project = ({ meta, content }: Props) => {
   return <Layout title={meta.title}>{parse(content)}</Layout>;
 }
 
-export default Writing;
-
+export default Project;
+// TODO: Dedupe
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const writing = getWritingBySlug(params.slug, 'blog');
+  const writing = getProjectBySlug(params.slug, 'project');
   const content = await markdownToHtml(writing.content || '');
 
   return {
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 }
 
 export async function getStaticPaths() {
-  const docs = getAllWriting('blog');
+  const docs = getAllWriting('project');
 
   return {
     paths: docs.map((doc) => {

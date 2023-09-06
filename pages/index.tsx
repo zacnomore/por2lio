@@ -16,6 +16,9 @@ const Home: NextPage = () => {
         I like to garden and cook with my wife, nap with my cat and play chess
         online.
       </p>
+      <a href="https://www.linkedin.com/in/zacharysvoboda/">LinkedIn</a>
+      <br />
+      <a href="https://github.com/zacnomore">Github</a>
     </Layout>
   );
 };

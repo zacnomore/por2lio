@@ -12,7 +12,14 @@ interface Props {
 }
 
 const Project = ({ meta, content }: Props) => {
-  return <Layout title={meta.title}>{parse(content)}</Layout>;
+  return (
+    <Layout title={meta.title}>
+      <a href={meta.site}>Live Demo</a>
+      <br />
+      <a href={meta.repository}>Code Repo</a>
+      {parse(content)}
+    </Layout>
+  );
 };
 
 export default Project;

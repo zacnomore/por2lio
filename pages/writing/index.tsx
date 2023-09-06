@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import Link from "next/link";
 import { getAllWriting } from "../../lib/find-writing";
 import React from "react";
-import styles from "./index.module.css";
+import styles from "../list.module.css";
 
 const Posts: NextPage<{ writings: ReturnType<typeof getAllWriting> }> = ({
   writings,
@@ -20,14 +20,12 @@ const Posts: NextPage<{ writings: ReturnType<typeof getAllWriting> }> = ({
               date: meta.date,
             }))
             .map(({ slug, title, description, date }) => (
-              <React.Fragment key={slug}>
+              <Link key={slug} href={"writing/" + slug} className={styles.link}>
                 <dt>
-                  <Link href={"writing/" + slug}>
-                    {title} ({date})
-                  </Link>
+                  {title} ({date})
                 </dt>
                 <dd>{description}</dd>
-              </React.Fragment>
+              </Link>
             ))}
         </dl>
       </section>

@@ -19,6 +19,10 @@ const Home: NextPage = () => {
       <a href="https://www.linkedin.com/in/zacharysvoboda/">LinkedIn</a>
       <br />
       <a href="https://github.com/zacnomore">Github</a>
+      <br />
+      <a href="https://bugzilla.mozilla.org/user_profile?user_id=646968">
+        Bugzilla
+      </a>
     </Layout>
   );
 };

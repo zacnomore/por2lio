@@ -9,7 +9,11 @@ interface Props {
 }
 
 const Writing = ({ meta, content }: Props) => {
-  return <Layout title={meta.title}>{parse(content)}</Layout>;
+  return (
+    <Layout title={meta.title} subTitle={`Written in ${meta.date}`}>
+      {parse(content)}
+    </Layout>
+  );
 };
 
 export default Writing;

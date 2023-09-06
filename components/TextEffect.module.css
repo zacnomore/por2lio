@@ -10,4 +10,6 @@
 
 .s {
   font-size: 1rem;
+  padding: 0 4px;
+  font-style: italic;
 }

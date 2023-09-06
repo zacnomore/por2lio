@@ -7,16 +7,26 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Zachary Svoboda</title>
-        <meta name="description" content="Person" />
+        <meta
+          name="description"
+          content="Person, capable of some things and not others"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout title="Hi, my name is Zac.">
-        <p>{`Here you can find my writing that I think is presently helpful or interesting.`}</p>
-        <p>{`If you find something that isn't, please reach out so I can improve or remove it.`}</p>
-        <p>{`You will find the site is sparse at this particular moment. Every few years I like to refresh it
-        as an opportunity to play with new tools and toss out content that I feel no longer represents me.`}</p>
-        <p></p>
+      <Layout title="Zachary Svoboda" subTitle="Frontend Developer">
+        <p>
+          Welcome to my portfolio. My name is Zac, I&apos;ve been a developer
+          for {new Date().getFullYear() - 2016} years. I often work with Angular
+          and Typescript although I cultivate an interest in a number of web
+          technologies; this site is built with Next.js for example.
+        </p>
+        <p>
+          I enjoy contributing to open source, I&apos;m proud to have landed
+          some contributions to the Firefox browser devtools. When I&apos;m not
+          coding I like to garden and cook with my wife, nap with my cat and
+          play chess online.
+        </p>
       </Layout>
     </>
   );

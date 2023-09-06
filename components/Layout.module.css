@@ -1,11 +1,15 @@
-.outer {
-  height: 100%;
-  padding: 2rem;
+.typography {
   font-family: "Work Sans", sans-serif;
 }
 
+.outer {
+  height: 100%;
+  padding: 2rem;
+}
+
 .inner {
-  border: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding: 2rem;
   font-size: 1rem;
   max-width: 900px;

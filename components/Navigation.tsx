@@ -4,7 +4,7 @@ import styles from "./Navigation.module.css";
 const Navigation = () => {
   return (
     <nav className={styles.navRow}>
-      <Link href="/">Intro</Link>
+      <Link href="/">About</Link>
       <Link href="/writing">Writing</Link>
       <Link href="/projects">Projects</Link>
       <a

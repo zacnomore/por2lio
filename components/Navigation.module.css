@@ -1,17 +1,19 @@
 .navRow {
-  position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   height: 3rem;
+  padding-right: 1rem;
+  position: sticky;
 
-  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   background: white;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .navRow a {
   padding: 10px;
+  text-decoration: none;
 }

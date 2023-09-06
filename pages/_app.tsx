@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <Analytics />
     </>
   );

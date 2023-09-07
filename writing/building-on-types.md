@@ -21,7 +21,7 @@ import { Injectable } from "@angular/core";
 export class FormService {
   createForm<T>(
     initialValues: T,
-    validators?: { [P in keyof T]: Validator<T[P]>[] }
+    validators?: { [P in keyof T]: Validator<T[P]>[] },
   ): Form<T> {
     return Array.from(Object.entries(initialValues)).reduce(
       (acc, [key, val]) => {
@@ -33,7 +33,7 @@ export class FormService {
         };
         return acc;
       },
-      <Form<T>>{}
+      <Form<T>>{},
     );
   }
 
@@ -55,10 +55,13 @@ export class FormService {
   }
 
   extractData<T>(form: Form<T>): T {
-    return Array.from(Object.entries(form)).reduce((acc, [key, val]) => {
-      acc[key] = val;
-      return acc;
-    }, <T>{});
+    return Array.from(Object.entries(form)).reduce(
+      (acc, [key, val]) => {
+        acc[key] = val;
+        return acc;
+      },
+      <T>{},
+    );
   }
 }
 

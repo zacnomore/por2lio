@@ -122,7 +122,7 @@ class SubscriptionBox {
   unsubscribe(resident, messageType) {
     this._subscriptions.splice(
       this._subscriptions.findIndex((sub) => sub === { resident, messageType }),
-      1
+      1,
     );
   }
 

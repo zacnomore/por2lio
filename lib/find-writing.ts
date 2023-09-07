@@ -17,7 +17,7 @@ export function getWritingBySlug(slug: string, type: "blog" | "project") {
     Object.entries(data).map(([k, v]) => [
       k,
       k === "date" ? new Date(v).getFullYear() : `${v}`,
-    ])
+    ]),
   );
 
   return {
@@ -35,7 +35,7 @@ export function getAllWriting(type: "blog" | "project") {
     .filter((w) => w.published)
     .sort(
       (a, b) =>
-        new Date(a.meta.date).getTime() - new Date(b.meta.date).getTime()
+        new Date(a.meta.date).getTime() - new Date(b.meta.date).getTime(),
     )
     .reverse();
 

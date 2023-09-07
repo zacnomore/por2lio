@@ -10,12 +10,6 @@ const Navigation = () => {
         About
       </Link>
       <Link
-        className={router.pathname.includes("/writing") ? styles.active : ""}
-        href="/writing"
-      >
-        Writing
-      </Link>
-      <Link
         className={router.pathname.includes("/projects") ? styles.active : ""}
         href="/projects"
       >
